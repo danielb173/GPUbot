@@ -1,21 +1,27 @@
 # GPUbot
 
-The goal is to learn Selenium + Python
-
-This bot will monitor and notify stock levels for RTX3080 graphics cards.
+This bot will monitor the Scan website, notifying via discord when RTX3080 stock is available.
+Disclaimer: the Scan website uses a captcha prompt to prevent bots from auto buying, this bot is strictly a stock monitor/notifier. 
 
 Bot outline:
-- Install python and selenium
+- Install python/visual studio (done)
+- Create project folder
+- Install selenium, BS4, and the chrome webdriver
 - Create GPUbot.py file
 - Import libraries
-- Open browser
-- Login to website via send keys.
-- Navigate to filtered 3080 URL: https://www.scan.co.uk/shop/gaming/virtual-reality/nvidia-geforce-rtx-3080-graphics-cards#filter=1&manufacturers=ASUS%7CEVGA%7CMSI
+- Open browser using selenium
+- Login to website via send keys (maybe not required)
+- Navigate to 3080fe direct URL: driver.get('https://www.scan.co.uk/nvidia/products/3080/xa3et4n9qf4b3b')
 - Maybe need to configure headers to prevent 503 errors.
 - Search page for stock levels below £800
-- Inspect element for 'Add to Basket' and 'Price'
-- Create FOR loop to continuously check for stock levels in case no stock at the time the bot was run.
-- Capture URL and price for products in stock
-- Notify stock levels via discord/emails, sending price and URL for quick purchase.
+- Inspect element for 'Add to Basket' and 'Price' classes
+- <a class="btn">Add To Basket</a>
+- <span itemprop="price" content="83.99"></span>
+- Use "html = driver.page_source" to get the page source code
+- Use BS4 html parser to find these classes, soup.find_all("span", {"class":"container_name"})
+- Create WHILE True: loop to continuously check for stock levels in case no stock at the time the bot was run.
+  - If("Add to basket" in product.text):
+  - time.sleep(5)
+- Notify stock levels via discord/emails, sending URL for quick purchase.
 
 Work in progress..
