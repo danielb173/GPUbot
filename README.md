@@ -13,10 +13,9 @@ Bot outline:
 - Login to website via send keys (maybe not required)
 - Navigate to 3080fe direct URL: driver.get('https://www.scan.co.uk/nvidia/products/3080/xa3et4n9qf4b3b')
 - Maybe need to configure headers to prevent 503 errors.
-- Search page for stock levels below £800
 - Inspect element for 'Add to Basket' and 'Price' classes
-- <a class="btn">Add To Basket</a>
-- <span itemprop="price" content="83.99"></span>
+- (<a class="btn">Add To Basket</a>)
+- (<span itemprop="price" content="83.99"></span>)
 - Use "html = driver.page_source" to get the page source code
 - Use BS4 html parser to find these classes, soup.find_all("span", {"class":"container_name"})
 - Create WHILE True: loop to continuously check for stock levels in case no stock at the time the bot was run.
