@@ -7,7 +7,7 @@ This bot will monitor and notify stock levels for RTX3080 graphics cards.
 Bot outline:
 - Install python and selenium
 - Create GPUbot.py file
-- Import dependencies 
+- Import libraries
 - Open browser
 - Login to website via send keys.
 - Navigate to filtered 3080 URL: https://www.scan.co.uk/shop/gaming/virtual-reality/nvidia-geforce-rtx-3080-graphics-cards#filter=1&manufacturers=ASUS%7CEVGA%7CMSI
