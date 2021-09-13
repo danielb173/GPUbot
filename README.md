@@ -1,7 +1,7 @@
 # GPUbot
 
 This bot will monitor the Scan website, notifying via discord when RTX3080 stock is available.
-/n Disclaimer: the Scan website uses a captcha prompt to prevent bots from auto buying, this bot is strictly a stock monitor/notifier. 
+n/ Disclaimer: the Scan website uses a captcha prompt to prevent bots from auto buying, this bot is strictly a stock monitor/notifier. 
 
 Bot outline:
 - Install python/visual studio (done)
