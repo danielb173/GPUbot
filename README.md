@@ -1,6 +1,6 @@
 # GPUbot
 
-The goal is to learn Selenium API + Python
+The goal is to learn Selenium + Python
 
 This bot will monitor and notify stock levels for RTX3080 graphics cards.
 
