@@ -10,11 +10,12 @@ Bot outline:
 - Create GPUbot.py file
 - Import libraries
 - Open browser using selenium
-- Login to website via send keys (maybe not required)
+- Login to website via send keys
+  - Maybe login not required
 - Navigate to 3080fe direct URL: driver.get('https://www.scan.co.uk/nvidia/products/3080/xa3et4n9qf4b3b')
-- Maybe need to configure headers to prevent 503 errors.
+  - Maybe need to configure headers to prevent 503 errors.
 - Inspect element for 'Add to Basket'
-- class="btn">Add To Basket
+  - class="btn">Add To Basket
 - Use "html = driver.page_source" to get the page source code
 - Use BS4 html parser to find these classes, soup.find_all("span", {"class":"container_name"})
 - Create WHILE True: loop to continuously check for stock levels in case no stock at the time the bot was run.
